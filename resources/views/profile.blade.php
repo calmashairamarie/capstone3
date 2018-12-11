@@ -5,22 +5,18 @@
 <div class="container-fluid">
 	
 	<div class="row">
-		<div class="col-lg-12 text-center">
-			<img src="{{ Auth::user()->profile_pic }}" style="height: 150px;">
-			<h1 class="text-center">{{ Auth::user()->firstname }} {{ Auth::user()->lastname }}</h1>
-		</div>
-	</div>
-	<div class="row">
+		<img src="{{ Auth::user()->profile_pic }}" style="height: 150px;">
+			<h1 class="text-center" style="margin-top: 40px;">{{ Auth::user()->firstname }} {{ Auth::user()->lastname }}</h1>
 		<div class="col-lg-9">
 			<div>
-				<ul class="uk-child-width-expand nav nav-tabs" uk-tab >
+				<ul class="uk-child-width-expand nav nav-tabs" style="margin-left: 50px;" uk-tab >
 					<li class="uk-active"><a data-toggle="tab" href="#posts">Posts</a></li>
 					<li class="text-center"><a data-toggle="tab" href="#comments">Comments</a></li>
-<!-- 					<li class="text-center"><a data-toggle="tab" href="#likes">Liked</a></li> -->
+					<li class="text-center"><a data-toggle="tab" href="#likes">Liked</a></li>
 					<li class="text-center"><a data-toggle="tab" href="#tags">Tags</a></li>
 					<li class="text-center"><a data-toggle="tab" href="#shared">Shared</a></li>
 					<li class="text-center"><a data-toggle="tab" href="#friend">friend</a></li>
-					<li class="text-center"><a data-toggle="tab" href="#photo">Photos</a></li>
+					<!-- <li class="text-center"><a data-toggle="tab" href="#photo">Photos</a></li> -->
 				</ul>
 			</div>
 			<div class="tab-content ">
@@ -61,8 +57,8 @@
 										<input type="hidden" name="post_id" value="{{ $post->id }}" />
 									</div>
 									<div class="form-group">
-										<!-- <a href="#" class="btn btn-link btn-md">Like</a>
-										<a href="#" class="btn btn-link btn-md">Dislike</a> -->
+										<a href="#" class="btn btn-link btn-md">Like</a>
+										<a href="#" class="btn btn-link btn-md">Dislike</a>
 
 										<input type="submit" hidden>
 
@@ -70,6 +66,7 @@
 
 
 										<a href="{{ route('post.show', $post->id) }}" class="btn btn-link btn-md">Show Post</a>
+
 									</div> 
 									<div class="form-group">
 										<div id="comments_box_{{ $post->id }}" style="display: none;">
@@ -80,7 +77,7 @@
 
 								<button class="btn-link" id="showMore" type="button" onClick="show({{ $post->id }})">View comments</button>
 
-								<!-- <a type="submit" href="#show({{ $post->id }})">View comments</a> -->
+								<a type="submit" href="#show({{ $post->id }})">View comments</a>
 
 								<span class="text-right">{{ $post->created_at->diffForHumans() }}</span>
 
@@ -112,13 +109,13 @@
 						@endforeach
 					<!-- </div> -->
 				</div>
-				<!-- <div id="likes" class="tab-pane fade">
+				<div id="likes" class="tab-pane fade">
 					<h3>Likes</h3>
 					<p></p>
 					<a href=""></a>
-				</div> -->
+				</div>
 				<div id="tags" class="tab-pane fade">
-					<h3>Tagss</h3>
+					<h3>Tags</h3>
 					<p></p>
 				</div>
 				<div id="shared" class="tab-pane fade">
@@ -141,7 +138,13 @@
 
 				<div id="friend" class="tab-pane fade">
 					<div class="col-sm-12">
-						<div class="card-deck">
+						<div class="col-lg-12 text-left">
+							<a href="/friends">View more</a>
+						</div>
+						<div class="col-lg-12">
+
+						</div>
+						<div class=" text-center">
 							@if(!$friends->count())
 						<p>You have no friends.</p>
 						@else
@@ -155,12 +158,8 @@
 						@endif
 						</div>
 					</div>
-					<div class="col-lg-12 text-right">
-						<a href="/friends">View more</a>
-					</div>
-					<div class="col-lg-12">
-
-					</div>
+					
+					
 				</div>
 
 

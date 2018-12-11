@@ -1,11 +1,6 @@
-/*variables*/
+
 #myfooter {
-  margin: 0;
-  background-color: #333;
-  padding-top: 1rem;
-  padding-bott/*variables*/
-#myfooter {
-  margin-top: 20px;
+  margin-top: 50px;
   background-color: #F7D9CF;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -177,4 +172,10 @@ a.btn:hover .fa.fa-facebook:before {
   top: 1rem;
   left: -200%;
   transition: 350ms cubic-bezier(0.175, 0.885, 0.32, 1.275) all;
+}
+
+
+#guest
+{
+  background-image: url(./images/home1.jpg);
 }

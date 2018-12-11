@@ -42,8 +42,8 @@ Route::middleware("auth")->group(function(){
 	Route::post('/reply/store', 'CommentController@replyStore')->name('reply.add');
 	/*edit post*/
 	Route::patch("/post/edit/{id}", "PostController@edit");
-	Route::delete("/post/delete/{id}", "PostController@destroy");
-	// Route::get("/post/like/{id}", "PostController@getLike")->name('post.like');
+	Route::delete("/post/delete/{id}", "PostController@destroy")->name('post.delete');
+	Route::get("/post/like/{id}", "PostController@getLike")->name('post.like');
 	Route::post("/post/share/{id}", "PostController@share");
 
 	Route::post('/comment/store', 'CommentController@store')->name('comment.add');

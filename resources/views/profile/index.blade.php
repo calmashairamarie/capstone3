@@ -1,15 +1,12 @@
 @extends("template.template")
 
 @section("content")
-<!-- 	<div class="row">
+	<div class="row">
 		<div class="col-lg-5">
 			@include('user.userblock')
 			<hr>
 		</div>
-		<div class="col-lg-4 col-lg-offset-3">
-			
-		</div>
-	</div> -->
+	</div>
 	
 	<div class="container-fluid">
 
@@ -19,7 +16,6 @@
 				<h1 class="text-center">{{ $user->firstname }} {{ $user->lastname }}</h1>
 				@if(Auth::user()->hasFriendRequestPending($user))
 					<p>Waiting for {{ $user->firstname }} {{ $user->lastname }} to accept your request</p>
-				@elseif(Auth::user()->hasFriendRequestReceived($user))
 					<a href="/friends/accept/{{ $user->id }}" class="btn btn-primary">Accept friend request</a>
 				@elseif(Auth::user()->isFriendsWith($user))
 					<h5>You and {{ $user->firstname }} {{ $user->lastname }} are friends</h5>

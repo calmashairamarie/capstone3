@@ -20,7 +20,7 @@ class CreatePostsTable extends Migration
             $table->string('title');
             $table->string('body')->nullable();
             $table->string('image')->nullable();
-            $table->string('shared_title');
+            $table->string('shared_title')->nullable();
             $table->string('shared_body')->nullable();
             $table->string('shared_image')->nullable();
             $table->timestamps();

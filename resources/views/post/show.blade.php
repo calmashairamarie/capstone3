@@ -35,11 +35,8 @@
                 {{ csrf_field() }}
                 <div class="form-group">
                     <div class="row">
-                        <a href="#" class="btn btn-link"><i class="far fa-thumbs-up fa-2x"></i></a>
-                      <!--   <a href="#" class="btn btn-link">{{$post->likes->count()}} Like </a> -->
-                        <!-- <a href="#" class="btn btn-link"></a> -->
-
-                        <!-- <span class="text-right">{{ $post->created_at->diffForHumans() }}</span> -->
+                        <a href="#" class="btn btn-link">{{$post->likes->count()}} Like </a>
+                        <span class="text-right" style="font-size: 12px;">{{ $post->created_at->diffForHumans() }}</span>
                         @if(Auth::user()->id == $post->user_id)
                         <a href="#" data-toggle="modal" data-target="#editpost" class="btn btn-link">Edit</a>
                         <a href="#" class="btn btn-link" data-toggle="modal" data-target="#confirmDelete">Delete</a>
@@ -118,13 +115,16 @@
                    <div class="modal-header">
                      <p class="heading">Are you sure?</p>
                   </div>
+                   <div class="modal-body">
+                     <h4>You want to DELETE?</h4>
+                  </div>
               
                <div class="modal-footer">
                   <form method="POST" action="/post/delete/{{$post->id}}">
                         {{ csrf_field() }}
                         {{ method_field("DELETE") }}
-                        <button type="submit" class="btn btn-outline-danger">Yes</button>
-                        <a type="button" class="btn  btn-danger waves-effect" data-dismiss="modal">No</a>
+                        <button type="submit" class="btn btn-danger">Yes</button>
+                        <a type="button" class="btn waves-effect" data-dismiss="modal">No</a>
                   </form>
             </div>
         </div>

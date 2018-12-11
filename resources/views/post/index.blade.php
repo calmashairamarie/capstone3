@@ -62,7 +62,7 @@
 					<div class="form-group">
 						<input type="hidden" name="post_id" value="{{ $post->id }}" />
 					</div>
-					<!-- <div class="form-group">
+					<div class="form-group">
 						<a href="/post/like/{{$post->id}}" class="btn btn-link">Like {{$post->likes->count()}} likes</a>
 						<input type="submit" hidden/>
 						<button type="button" class="btn btn-link" id="showCommentbox2" type="button" onClick="showcomment2({{ $post->id }})">Comment</button>
@@ -70,7 +70,7 @@
 						<button type="button" data-toggle="modal" data-target="#sharepost-{{$post->id}}" class="btn btn-link">Share photo</button>
 						@endif
 						<a href="{{ route('post.show', $post->id) }}" class="btn btn-link">Show Post</a>
-					</div> -->
+					</div>
 					<div class="form-group">
 						<div id="comments_box2_{{ $post->id }}" style="display: none;">
 							<input placeholder="Write something here" type="text"  class="form-control" name="comment_body" />
@@ -115,20 +115,20 @@
 			<div class="panel-footer">
 				<form method="post" action="{{ route('comment.add') }}">
 					{{ csrf_field() }}
-					<!-- <div class="form-group">
-						<a href="/post/like/{{$post->id}}" class="btn btn-link">Like {{$post->likes->count()}}</a> -->
-						<!-- <button type="button" class="btn btn-link" id="showCommentbox" type="button" onClick="showcomment({{ $post->id }})">Comment</button> -->
+					 <div class="form-group">
+						<a href="/post/like/{{$post->id}}" class="btn btn-link">Like {{$post->likes->count()}}</a>
+						 <button type="button" class="btn btn-link" id="showCommentbox" type="button" onClick="showcomment({{ $post->id }})">Comment</button>
 
-						<!-- <span class="text-right">{{ $post->created_at->diffForHumans() }}</span> -->
-						<!-- @if( $post->image != null || $post->shared_image !=null) -->
-					<!-- 	<button type="button" data-toggle="modal" data-target="#sharepost-{{$post->id}}" class="btn btn-link">Share photo</button>
-						@endif -->
+						 <span class="text-right">{{ $post->created_at->diffForHumans() }}</span> 
+						 @if( $post->image != null || $post->shared_image !=null)
+							<button type="button" data-toggle="modal" data-target="#sharepost-{{$post->id}}" class="btn btn-link">Share photo</button>
+						@endif
 						
 
 
-						<!-- <input type="submit" class="btn btn-link" value="Add Comment" /> -->
-						<!-- <a href="{{ route('post.show', $post->id) }}" class="btn btn-link">Show Post</a>
-					</div> --> 
+						<input type="submit" class="btn btn-link" value="Add Comment" />
+						<a href="{{ route('post.show', $post->id) }}" class="btn btn-link">Show Post</a>
+					</div> 
 					<div class="form-group">
 						<div id="comments_box_{{ $post->id }}" style="display: none;">
 							<input placeholder="Write something here" type="text" name="comment_body" class="form-control" />

@@ -1,8 +1,9 @@
 @extends("template.template")
 
 @section("content")
+<div class="conatiner-fluid">
 	<div class="row">
-		<div class="col-lg-6">
+		<div class="col-lg-12">
 			<h3>Your Friends</h3>
 
 			@if(!$friends->count())
@@ -13,7 +14,7 @@
 				@endforeach
 			@endif
 		</div>
-		<div class="col-lg-6">
+		<div class="col-lg-12">
 			<h3>Friend requests</h3>
 
 			@if(!$requests->count())
@@ -25,4 +26,5 @@
 			@endif
 		</div>
 	</div>
+</div>
 @endsection
