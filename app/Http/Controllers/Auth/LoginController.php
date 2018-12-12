@@ -31,9 +31,9 @@ class LoginController extends Controller
     protected function authenticated($request, $user){
         // return $user;
         // return $user->role;
-        if($user->role("admin")){
+        if($user->role("member")){
             return 
-            redirect('/admindashboard')
+            redirect('/profile')
             ->with('info', 'Logged in Successfully');
 
         }elseif($user->role('staff')){
@@ -41,9 +41,9 @@ class LoginController extends Controller
             redirect('/admindashboard')
             ->with('info', 'Logged in Successfully');
 
-        }elseif($user->role('member')){
+        }elseif($user->role('admin')){
             return 
-            redirect('/profile')
+            redirect('/admindashboard')
             ->with('info', 'Logged in Successfully');
         } else {
             return redirect('/home');

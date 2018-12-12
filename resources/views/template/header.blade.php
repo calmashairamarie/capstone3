@@ -5,17 +5,6 @@
 
 
 	<div class="uk-navbar-right">
-		
-		<div class="uk-navbar-item">
-			<form class="navbar-form" action="{{ route('search.results') }}" role="search">
-				<div class="row">
-					<div class="form-group">
-						<input style="height: 30px;" name="query" class="uk-input form-control" type="text" placeholder="Find people">
-					</div>
-					<button style="height: 30px;" type="submit" class="uk-button uk-button-default">Search</button>
-				</div>
-			</form>
-		</div>
 
 		<ul class="uk-navbar-nav">
 
@@ -23,6 +12,16 @@
 				<li><a href="{{ route('login') }}">Login</a></li>
 				<li><a href="{{ route('register') }}">Register</a></li>
 				@else
+				<div class="uk-navbar-item">
+					<form class="navbar-form" action="{{ route('search.results') }}" role="search">
+						<div class="row">
+							<div class="form-group">
+								<input style="height: 30px;" name="query" class="uk-input form-control" type="text" placeholder="Find people">
+							</div>
+							<button style="height: 30px;" type="submit" class="uk-button uk-button-default">Search</button>
+						</div>
+					</form>
+				</div>
 				<li class="dropdown">
 					<a href="/profile" class="dropdown-toggle" data-toggle="dropdown" role="button" v-pre>
 						{{ Auth::user()->username }} <!-- <span class="caret"></span> -->
