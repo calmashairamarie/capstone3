@@ -7,10 +7,10 @@
  		<div class="media-body">
  			<h9 class="mt-0 font-weight-bold"><a href="/user/{{$comment->user->id}}">{{ $comment->user->firstname }} {{ $comment->user->lastname }}</a></h9>
  			<p>{{ $comment->body }}</p>
- 			<a href="#">Like</a>
+ 			<!-- <a href="#">Like</a>
 
  			<a href="#">Edit</a>
- 			<a href="#">Delete</a>
+ 			<a href="#">Delete</a> -->
  		</div>
  	</div>
  </div>

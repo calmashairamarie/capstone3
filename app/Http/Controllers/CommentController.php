@@ -22,6 +22,7 @@ class CommentController extends Controller
         return back();
     }
 
+
      public function replyStore(Request $request)
     {
         $reply = new Comment();
@@ -35,4 +36,16 @@ class CommentController extends Controller
         return back();
 
     }
+
+
+    // public function edit(Request $request)
+    // {
+    //      $post = Post::find($request->get('post_id'));
+    //       $comment->body = $request->get('comment_body');
+    //      $this->validate($request, $comment->body);
+    //      $post->comments()->save($comment);
+    //     // $comment->comment
+    //     /*dd($comment);*/
+    //     return back();
+    // }
 }

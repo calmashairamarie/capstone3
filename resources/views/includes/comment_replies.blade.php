@@ -10,10 +10,12 @@
             <div class="media-body">
                 <h8 class="mt-0 font-weight-bold"><a href="/user/{{$comment->user->id}}">{{ $comment->user->firstname }} {{ $comment->user->lastname }}</a></h8>
                 <p>{{ $comment->body }}</p>
-                <a href="#">Like</a>
+                
+               <!--  <a href="#">Like</a> -->
                
-                <a href="#">Edit</a>
-                <a href="#">Delete</a>
+                <!-- <a href="#editcomment">Edit</a>
+                <a href="#">Delete</a> -->
+                <input type="submit" class="btn btn-link" value="Add Comment" />
 
               
                  @include('includes.replies', ['comments' => $comment->replies])
@@ -32,10 +34,3 @@
         </div>
     </div>
     @endforeach
-
-
- 
-
-
-
-

@@ -121,12 +121,9 @@
 
 						 <span class="text-right">{{ $post->created_at->diffForHumans() }}</span> 
 						 @if( $post->image != null || $post->shared_image !=null)
-							<button type="button" data-toggle="modal" data-target="#sharepost-{{$post->id}}" class="btn btn-link">Share photo</button>
+							<button type="button" data-toggle="modal" data-target="#sharepost-{{$post->id}}" class="btn btn-link">Show photo</button>
 						@endif
 						
-
-
-						<input type="submit" class="btn btn-link" value="Add Comment" />
 						<a href="{{ route('post.show', $post->id) }}" class="btn btn-link">Show Post</a>
 					</div> 
 					<div class="form-group">
@@ -149,7 +146,7 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<span></span>
-						<h4 class="modal-title w-100" id="myModalLabel" >Share this photo</h4>
+						<h4 class="modal-title w-100" id="myModalLabel" >Show this photo</h4>
 						<button type="button" class="close" data-dismiss="modal">
 							<span>&times;</span>
 						</button>
@@ -171,7 +168,7 @@
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary btn-md" data-dismiss="modal">Close</button>
-						<button type="button" onclick="shared({{$post->id}})" data-id="{{ $post->id }}" class="btn btn-primary btn-md">Share</button>
+						<!-- <button type="button" onclick="shared({{$post->id}})" data-id="{{ $post->id }}" class="btn btn-primary btn-md">Share</button> -->
 					</div>
 				</div>
 			</div>

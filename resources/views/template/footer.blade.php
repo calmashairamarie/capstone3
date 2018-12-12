@@ -29,6 +29,6 @@
 		</div> -->
 	<!-- </div> -->
 	<div class="footer-copyright text-center">© 2018 Copyright:
-		<a href="#">Shaira Marie D. Calma</a>
+		<a href="https://calmashairamarie.github.io/caps3porfolio/">Shaira Marie D. Calma</a>
 	<!-- </div> -->
 </footer>

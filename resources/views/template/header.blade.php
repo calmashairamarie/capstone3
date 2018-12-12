@@ -60,7 +60,7 @@
 				<li>
 					<a href="/post">
 						<span class="uk-icon uk-margin-small-right"><i class="far fa-lg fa-newspaper"></i></span>
-						Post
+						Newsfeed
 					</a>
 				</li>
 			</ul>

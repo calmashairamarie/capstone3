@@ -71,13 +71,34 @@
 	</div>
 
 	@else
-	<div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light"
-     data-src="https://images.unsplash.com/photo-1490822180406-880c226c150b?fit=crop&w=650&h=433&q=80"
-     data-srcset="https://images.unsplash.com/photo-1490822180406-880c226c150b?fit=crop&w=650&h=433&q=80 650w,
-                  https://images.unsplash.com/photo-1490822180406-880c226c150b?fit=crop&w=1300&h=866&q=80 1300w"
-     data-sizes="(min-width: 650px) 650px, 100vw" uk-img>
-    <h1>SOcial Media</h1>
+
+	<div class="uk-position-relative uk-visible-toggle uk-dark" uk-slideshow>
+
+    <ul class="uk-slideshow-items">
+        <li>
+            <div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" style="background-color: #FFE5D9;">
+            		<h1 class="text-center" style="background-color: #FFE5D9;">Social Media</h1>
+
+			</div>
+        </li>
+        <li>
+            <div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" style="background-color:  #FFCAD4;">
+            	<h1 class="text-center" style="background-color:  #FFCAD4;">You can interact with me, to him and to anyone</h1>
+			</div>
+			
+        </li>
+        <li>
+             <div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" style="background-color:  #F4ACB7;">
+             	<h1 class="text-center" style="background-color:  #F4ACB7;">With security and privacy</h1>
+			</div>
+        </li>
+    </ul>
+
+    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+
 </div>
+
 @endguest				
 	
 
