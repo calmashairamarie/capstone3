@@ -47,6 +47,7 @@ Route::middleware("auth")->group(function(){
 	Route::post("/post/share/{id}", "PostController@share");
 
 	Route::post('/comment/store', 'CommentController@store')->name('comment.add');
+	Route::delete("/comment/delete/{id}", "CommentController@delete")->name('comment.delete');
 	// Route::patch('/comment/edit/{id}', 'CommentController@edit');
 });
 
