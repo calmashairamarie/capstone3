@@ -44,7 +44,8 @@ class LoginController extends Controller
     // protected $redirectTo = '/home';
 
     protected $username = 'username';
-    
+
+
     protected function authenticated($request, $user){
         // return $user;
         // return $user->role;

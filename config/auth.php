@@ -1,5 +1,5 @@
 <?php
-
+protected $username = 'username';
 return [
 
     /*
@@ -32,8 +32,16 @@ return [
     | mechanisms used by this application to persist your user's data.
     |
     | Supported: "session", "token"
-    |
-    */
+    |PHP
+
+
+protected $username = 'username';
+
+1
+2
+3
+ 
+protected $username = 'username';
 
     'guards' => [
         'web' => [
@@ -89,7 +97,10 @@ return [
     | considered valid. This security feature keeps tokens short-lived so
     | they have less time to be guessed. You may change this as needed.
     |
+
     */
+
+
 
     'passwords' => [
         'users' => [
