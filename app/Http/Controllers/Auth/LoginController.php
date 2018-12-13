@@ -44,12 +44,16 @@ class LoginController extends Controller
     // protected $redirectTo = '/home';
 
     protected $username = 'username';
-
+/*    public function username()
+    {
+        return 'username';
+    }*/
 
     protected function authenticated($request, $user){
         // return $user;
         // return $user->role;
         if($user->role("member")){
+
             return 
             redirect('/profile')
             ->with('info', 'Logged in Successfully');
